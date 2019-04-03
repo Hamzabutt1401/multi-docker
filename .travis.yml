@@ -20,7 +20,7 @@ after_success:
 
   #push image into docker
 
-  - docker push hamzabutt1401/multi-client
+  - docker push hamzabutt1401/client
   - docker push hamzabutt1401/multi-nginx
   - docker push hamzabutt1401/multi-server
   - docker push hamzabutt1401/multi-worker
