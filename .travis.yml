@@ -9,10 +9,10 @@ script:
   - docker run hamzabutt1401/react-test npm run test -- --coverage
 
 after_success:
-  - docker build hamzabutt1401/react-client ./client
-  - docker build hamzabutt1401/react-nginx ./nginx
-  - docker build hamzabutt1401/react-server ./server
-  - docker build hamzabutt1401/react-worker ./worker
+  - docker build -t hamzabutt1401/multi-client ./client
+  - docker build -t hamzabutt1401/multi-nginx ./nginx
+  - docker build -t hamzabutt1401/multi-server ./server
+  - docker build -t hamzabutt1401/multi-worker ./worker
 
   #login in to docker
 
@@ -20,7 +20,7 @@ after_success:
 
   #push image into docker
 
-  - docker push hamzabutt1401/react-client
-  - docker push hamzabutt1401/react-nginx
-  - docker push hamzabutt1401/react-server
-  - docker push hamzabutt1401/react-worker
+  - docker push hamzabutt1401/multi-client
+  - docker push hamzabutt1401/multi-nginx
+  - docker push hamzabutt1401/multi-server
+  - docker push hamzabutt1401/multi-worker
