@@ -9,7 +9,7 @@ script:
   - docker run hamzabutt1401/react-test npm run test -- --coverage
 
 after_success:
-  - docker build hamzabutt1401/multi-client ./client
+  - docker build hamzabutt1401/multi-docker-client ./client
   - docker build hamzabutt1401/multi-nginx ./nginx
   - docker build hamzabutt1401/multi-server ./server
   - docker build hamzabutt1401/multi-worker ./worker
